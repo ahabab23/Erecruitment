@@ -5,7 +5,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import TypedJS from "../components/TypedJS";
 import Title from "../components/Title";
-import "../styles/About.css";
+import "../styles/About.css"
+
 
 const About = () => {
   useEffect(() => {
@@ -19,22 +20,23 @@ const About = () => {
 
   return (
     <div
-      className="flex flex-col bg-black/80 items-center justify-center min-h-screen w-full"
+      className="flex flex-col  items-center justify-center min-h-screen w-full"
       data-aos="fade-up"
       data-aos-delay="300"
     >
-      <div className=" abt container mx-auto px-4 py-6  h-[400px] md:h-[200px]">
-        {/* Hero Section */}
-        <div className="absolute inset-0  bg-black/50 bg-opacity-80"></div>
-        <div className="relative sm:w-full  h-[300px] sm:h-[100px] mx-auto">
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-            <h1 className=" relative text-xl sm:text-2xl md:text-xl font-bold mb-4 uppercase italic top-5 ">
-              <TypedJS strings={categories} />
-            </h1>
-          </div>
+        <div className=" abt container mx-auto px-4 py-6  h-[400px] md:h-[200px]">
+      {/* Hero Section */}
+      <div className="absolute inset-0  bg-black/50 bg-opacity-80"></div>
+      <div className="relative sm:w-full  h-[300px] sm:h-[100px] mx-auto">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
+          <h1 className=" relative text-xl sm:text-2xl md:text-xl font-bold mb-4 uppercase italic top-5 ">
+            <TypedJS strings={categories} />
+          </h1>
         </div>
       </div>
-
+      
+      </div>
+      
       <div className="container mx-auto px-4 py-6 bg-black">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           {/* Step 1 */}
@@ -43,9 +45,16 @@ const About = () => {
             data-aos="fade-up"
             data-aos-delay="300"
           >
+            {/* Image Section - Top on mobile and desktop */}
+            <div className="mb-6 bg-white">
+             <p>
+             🌍 
+             </p>
+            </div>
+
             {/* Text Section - Below image */}
             <div className="text-center px-4">
-              <Title highlightText="+100 Recruitments" mainText="WorldWide" />
+              <Title highlightText="+100 Recruitments" mainText="Worldwide" />
               
               <p className="text-gray-300 text-lg md:text-xs mt-3">
               We’ve successfully placed over 100 professionals across the globe! Our extensive network ensures you find the right opportunity or hire, no matter where you are.
@@ -62,15 +71,20 @@ const About = () => {
             data-aos="fade-up"
             data-aos-delay="100"
           >
+            {/* Image Section - Top on mobile and desktop */}
+            <div className="mb-6">
+                <p>
+                ✅
+                </p>
+             
+            </div>
+
             {/* Text Section - Below image */}
             <div className="text-center px-4">
-              <Title highlightText="Verified" mainText="" />
-              <h3 className="text-2xl md:text-sm font-semibold mt-2">
-                Personalize Your Gift
-              </h3>
+              <Title highlightText="Certified" mainText="Recruitment Experts" />
+              
               <p className="text-gray-300 text-lg md:text-xs mt-3">
-                Add a special message and choose whether you are gifting
-                yourself or someone else.
+              Our team of certified recruitment specialists brings years of experience to connect top talent with the best employers. Trust us to make the hiring process seamless and efficient.
               </p>
             </div>
 
@@ -84,15 +98,19 @@ const About = () => {
             data-aos="fade-up"
             data-aos-delay="300"
           >
+            {/* Image Section - Top on mobile and desktop */}
+            <div className="mb-6">
+            <p>
+            🚀  
+            </p>
+            </div>
+
             {/* Text Section - Below image */}
             <div className="text-center px-4">
-              <Title highlightText="Step" mainText="Three" />
-              <h3 className="text-2xl md:text-sm font-semibold mt-2">
-                Send & Redeem
-              </h3>
+              <Title highlightText="Fast &" mainText="Efficient Hiring" />
+              
               <p className="text-gray-300 text-lg md:text-xs mt-3">
-                The recipient will receive a digital gift card that can be
-                redeemed at our partnered supermarket outlets.
+              We match the right candidates with the right roles in record time. Our streamlined process ensures quick turnarounds without compromising quality.
               </p>
             </div>
           </div>
@@ -105,7 +123,7 @@ const About = () => {
 
       {/* Additional Section  */}
       <div
-        className="relative  w-full h-[450px] md:h-[200px] mx-auto flex justify-center items-center mt-8 mb-10"
+        className="relative bg-black/  w-full h-[450px] md:h-[200px] mx-auto flex justify-center items-center mt-8 mb-10"
         data-aos="fade-up"
         data-aos-delay="300"
       >
