@@ -225,7 +225,7 @@ const ContactComponent = () => {
                         Office Location
                       </h3>
                       <div className="text-gray-600 mt-1">
-                        I&M Bank House <br />
+                        TRV Centre <br />
                         Nairobi, Kenya
                       </div>
                     </div>
