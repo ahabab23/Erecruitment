@@ -23,12 +23,12 @@ const CDLHeroSection = () => {
   }, [services]);
 
   return (
-    <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full bg-purple-800 mt-10">
+    <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full bg-purple-800 ">
       <div className="flex flex-col lg:flex-row min-h-[35vh] items-center py-8">
         <div className="flex-1 flex flex-col justify-center max-w-2xl pt-4 lg:pt-0">
           <div className="animate-fade-in-up">
             <div className="inline-block px-4 py-2 rounded-full bg-purple-800/50 text-purple-100 text-sm mb-4">
-              Welcome to CDL
+              Welcome to Hacof
             </div>
             <h1 className="text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight">
               Excellence in

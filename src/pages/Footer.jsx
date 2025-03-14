@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 const Footer = () => {
   return (
@@ -25,23 +26,41 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-2">
-              {["Home", "About Us", "Blogs", "Contact Us"].map(
-                (item, index) => (
+              {["Home", "About Us", "Contact Us"].map((item, index) => {
+                const path =
+                  item === "Home"
+                    ? "/"
+                    : `/${item.toLowerCase().replace(" ", "-")}`;
+
+                return (
                   <li key={index} className="group">
-                    <a
-                      className="text-gray-300 hover:text-white transition-colors text-sm inline-flex items-center"
-                      href={
-                        item === "Home"
-                          ? "/"
-                          : `/${item.toLowerCase().replace(" ", "-")}`
+                    <NavLink
+                      end={item === "Home"}
+                      to={path}
+                      className={({ isActive }) =>
+                        `text-sm inline-flex items-center transition-colors ${
+                          isActive
+                            ? "text-white font-medium"
+                            : "text-gray-300 hover:text-white"
+                        }`
                       }
                     >
-                      <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 opacity-0 transform scale-0 group-hover:opacity-100 group-hover:scale-100 transition-all"></span>
-                      {item}
-                    </a>
+                      {({ isActive }) => (
+                        <>
+                          <span
+                            className={`w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 transition-all ${
+                              isActive
+                                ? "opacity-100 scale-100"
+                                : "opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100"
+                            }`}
+                          ></span>
+                          {item}
+                        </>
+                      )}
+                    </NavLink>
                   </li>
-                )
-              )}
+                );
+              })}
             </ul>
           </div>
 
@@ -50,15 +69,15 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
             <ul className="space-y-2">
               {[
-                { name: "Recruitment", href: "/services/recruitment-services" },
-                { name: "Training", href: "/services/training" },
+                { name: "Recruitment", href: "#" },
+                { name: "Training", href: "#" },
                 {
                   name: "Labour Outsourcing",
-                  href: "/services/labour-outsourcing",
+                  href: "#",
                 },
                 {
                   name: "Hr360: Your End-to-end Hr Partner",
-                  href: "/services/hr360-your-end-to-end-hr-partner",
+                  href: "#",
                 },
               ].map((service, index) => (
                 <li key={index} className="group">
@@ -101,7 +120,7 @@ const Footer = () => {
                 </span>
               </a>
 
-              <a href="" className="group flex items-center space-x-3">
+              <a href="#" className="group flex items-center space-x-3">
                 <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-gray-700 transition-all duration-300">
                   <svg
                     className="w-4 h-4 text-gray-300 group-hover:text-white"
@@ -146,9 +165,9 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col space-y-1">
                   <div className="text-gray-300 text-sm leading-relaxed">
-                    <p>I &amp; M BANK HOUSE, 3rd Floor</p>
-                    <p>2nd Ngong&apos; Avenue</p>
-                    <p>19348-00202, Nairobi Kenya</p>
+                    <p>TRV Centre, 2rd Floor</p>
+                    <p>3rd Parklands&apos; Road</p>
+                    <p>11002-00304, Nairobi Kenya</p>
                   </div>
                 </div>
               </div>

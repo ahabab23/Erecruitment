@@ -16,7 +16,7 @@ const AboutSection = () => {
                   Leading Recruitment & HR Solutions Provider
                 </h1>
                 <p className="text-xl text-gray-700 leading-relaxed max-w-xl">
-                  CDL Limited stands at the forefront of Kenya's recruitment
+                  Hacof Limited stands at the forefront of Kenya's recruitment
                   landscape, delivering exceptional talent acquisition,
                   consulting, and corporate training solutions that transform
                   businesses.
